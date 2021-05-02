@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Settings extends StatelessWidget {
+  final bool state = false;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -13,7 +14,7 @@ class Settings extends StatelessWidget {
             style: TextStyle(fontSize: 18)
         )),
         Container(
-          constraints: BoxConstraints(maxWidth: 500, minHeight: 300),
+          constraints: BoxConstraints(minHeight: 300, maxWidth: 500),
           margin: const EdgeInsets.all(15.0),
           padding: const EdgeInsets.all(3.0),
           decoration: BoxDecoration(border: Border.all(color: Colors.black)),
@@ -24,23 +25,26 @@ class Settings extends StatelessWidget {
                 children: [
                   Text("Dark mode"),
                   Switch(
-                    value: false,
+                    value: state,
+                    onChanged: (state) {},
                   ),
               ]),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Give data for commercial use "),
+                  Text("Give data for commercial use"),
                   Switch(
                     value: false,
+                    onChanged: (state) {},
                   ),
                 ]),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Allow mobile data usage: "),
+                  Text("Allow mobile data usage"),
                   Switch(
                     value: false,
+                    onChanged: (state) {},
                   ),
                 ]),
             ],
@@ -53,7 +57,7 @@ class Settings extends StatelessWidget {
                 style: TextStyle(fontSize: 18)
             )),
         Container(
-          constraints: BoxConstraints(maxWidth: 500, minHeight: 300),
+          constraints: BoxConstraints(minHeight: 300, maxWidth: 500),
           margin: const EdgeInsets.all(15.0),
           padding: const EdgeInsets.all(3.0),
           decoration: BoxDecoration(border: Border.all(color: Colors.black)),
